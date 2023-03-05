@@ -1,0 +1,7 @@
+1. statisztika:
+
+Minden file-hoz készüljön egy statisztika, ebben az esetben a statisztika neve: a txt_file_neve.json legyen:
+Statisztikák:
+    - Megjelenés ideje
+    - Könyv neve
+    - Oldal szám: 3000 karakter számít 1 oldalnak

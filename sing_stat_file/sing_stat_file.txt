@@ -1,0 +1,18 @@
+2. statisztika:
+Itt egyetlen egy file készüljön, az összes könyvet megvizsgálva kell elkészíteni:
+
+    - leghosszabb könyv
+    - legrövidebb könyv
+    - legrégebben megjelent könyv
+    - leghosszabb című könyv
+    - legtöbb 5 betűnél hosszabb szót tartalmazó könyv
+
+    A statisztika valahogy így nézzen ki:
+    statistics.json
+    {
+        "longest_book": {"page_size": 200, "title": "Dracula},
+        "shortest_book": {"page_size": 100, "title": "valamilyen_konyv"},
+        "oldest_book": {"release_date": 1811, "title": "konyv neve"},
+        "longest_title": {"title": "name", "length": 34},
+        "legtobb_5_karakteres_szo": {"words_num": 450, "title": "konyv neve"}
+    }
