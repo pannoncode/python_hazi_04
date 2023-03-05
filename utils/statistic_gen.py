@@ -1,16 +1,18 @@
+from file_handler import read_directory
+from file_handler import read_file
+
+from params import stats_folder_path
+from params import book_folder_path
+
+import re
+
+
 def book_statistic():
     """
     legenerálja a fájlonkénti statisztikát (1. statisztika)
     """
-    from file_handler import read_directory
-    from file_handler import read_file
     from file_handler import write_single_book_file
-
-    from params import stats_folder_path
-    from params import book_folder_path
-
     import math
-    import re
 
     regTitle = r"Title: .*"
     regRelease = r"Release Date: .*"
@@ -66,7 +68,6 @@ def oldest_book(result_stats):
     """
     megkeresi a kiadás dátumát és visszaadja
     """
-    import re
 
     rel_date_full = []
     reg_date = r"[0-9]{4}"
@@ -118,12 +119,6 @@ def more_than_five_character():
     megkeresi, hogy melyik könyvben van a legtöbb 5 karakter vagy 
     annál hosszabb szavak
     """
-    from file_handler import read_directory
-    from file_handler import read_file
-
-    from params import book_folder_path
-
-    import re
 
     regTitle = r"Title: .*"
     book = read_directory(book_folder_path, "txt")
@@ -154,11 +149,8 @@ def all_book_statistic():
     összegyűjti a statisztikai adatokat és 
     kiíratja json fájlba
     """
-    from params import stats_folder_path
     from params import sing_stat_folder_path
 
-    from file_handler import read_directory
-    from file_handler import read_file
     from file_handler import convert_json_to_dict
     from file_handler import write_single_stat_file
 
