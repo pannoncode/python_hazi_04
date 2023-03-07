@@ -3,6 +3,10 @@ import json
 
 
 def read_directory(folder_path, file_type):
+
+    if not os.path.exists(folder_path):
+        print(f"Nem létezik ez a könyvtár: {folder_path}")
+
     files = []
     for item in os.listdir(folder_path):
         if item.endswith(f".{file_type}"):
@@ -11,6 +15,9 @@ def read_directory(folder_path, file_type):
 
 
 def read_file(folder_path, files):
+    if not os.path.exists(folder_path):
+        print(f"Nem létezik ez a könyvtár: {folder_path}")
+
     data = []
     for item in files:
         with open(f"{folder_path}/{item}", "r", encoding="utf-8") as f_obj:

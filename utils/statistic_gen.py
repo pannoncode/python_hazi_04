@@ -1,8 +1,6 @@
-from file_handler import read_directory
-from file_handler import read_file
+from utils.file_handler import read_directory, read_file
 
-from params import stats_folder_path
-from params import book_folder_path
+from utils.params import stats_folder_path, book_folder_path
 
 import re
 
@@ -11,7 +9,7 @@ def book_statistic():
     """
     legenerálja a fájlonkénti statisztikát (1. statisztika)
     """
-    from file_handler import write_single_book_file
+    from utils.file_handler import write_single_book_file
     import math
 
     regTitle = r"Title: .*"
@@ -149,10 +147,10 @@ def all_book_statistic():
     összegyűjti a statisztikai adatokat és 
     kiíratja json fájlba
     """
-    from params import sing_stat_folder_path
+    from utils.params import sing_stat_folder_path
 
-    from file_handler import convert_json_to_dict
-    from file_handler import write_single_stat_file
+    from utils.file_handler import convert_json_to_dict
+    from utils.file_handler import write_single_stat_file
 
     files = read_directory(stats_folder_path, "json")
     stats = read_file(stats_folder_path, files)
